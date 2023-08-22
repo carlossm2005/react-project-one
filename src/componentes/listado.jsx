@@ -1,8 +1,6 @@
 import Paciente from "./paciente"
 
-const Listado = ({pacientes}) =>{
-
-    console.log(pacientes)
+const Listado = ({pacientes, setPaciente, eliminarPaciente}) =>{
 
     return (
         <div className="listado w-1/2 my-5">
@@ -18,6 +16,8 @@ const Listado = ({pacientes}) =>{
                         <Paciente 
                         key = {paciente.id}
                         paciente = {paciente}
+                        setPaciente = {setPaciente}
+                        eliminarPaciente = {eliminarPaciente}
                         />
                     )
                 })}
